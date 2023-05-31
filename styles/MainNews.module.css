@@ -1,0 +1,30 @@
+.main_news_box button {
+  font-family: inherit;
+  letter-spacing: 0.5rem;
+  color: var(--off-white);
+  background-color: var(--very-dark-blue);
+  font-size: 0.8rem;
+  font-weight: var(--bold);
+  padding: 1rem;
+  border: 0;
+}
+
+.main_news_box {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  grid-column: span 2;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: var(--super-bold);
+  color: var(--very-dark-blue);
+  line-height: 1;
+}

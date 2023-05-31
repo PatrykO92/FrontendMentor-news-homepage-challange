@@ -1,0 +1,18 @@
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu > div {
+  display: flex;
+  gap: 2rem;
+  color: var(--dark-grayish-blue);
+  font-weight: var(--light-bold);
+}
+
+.menu > div > *:hover {
+  color: var(--soft-red);
+  transition: all 0.5s;
+}

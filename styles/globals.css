@@ -1,10 +1,11 @@
 :root {
   --light: 400;
-  --normal: 700;
-  --bold: 800;
+  --light-bold: 500;
+  --bold: 700;
+  --super-bold: 900;
   --font-size-paragraph: 15px;
   --mobile-width: 375px;
-  --max-width: 1440px;
+  --max-width: 1120px;
   --soft-orange: hsl(35, 77%, 62%);
   --soft-red: hsl(5, 85%, 63%);
   --off-white: hsl(36, 100%, 99%);
@@ -25,12 +26,13 @@ a {
 }
 
 body {
+  padding: 3rem;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
   min-height: 100vh;
   max-width: var(--max-width);
 }

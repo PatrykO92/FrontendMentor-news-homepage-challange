@@ -1,0 +1,37 @@
+.news_box {
+  background-color: var(--very-dark-blue);
+  color: white;
+  padding: 2rem 1.5rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.news_box > p {
+  color: var(--soft-orange);
+  font-weight: var(--bold);
+  font-size: 2rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.article p {
+  font-size: 1.2rem;
+  font-weight: var(--bold);
+}
+
+.article p:hover {
+  color: var(--soft-orange);
+}
+
+.article span {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--grayish-blue);
+}

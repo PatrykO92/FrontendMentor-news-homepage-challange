@@ -1,0 +1,38 @@
+.trending_news_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.article {
+  display: flex;
+  gap: 1rem;
+}
+
+.image {
+  height: auto;
+  max-width: 6rem;
+}
+
+.article > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article > div > p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: var(--bold);
+  color: var(--grayish-blue);
+}
+
+.article > div > p:nth-child(2) {
+  font-size: 1.1rem;
+  font-weight: var(--super-bold);
+}
+
+.article > div > p:nth-child(3) {
+  font-weight: var(--normal);
+  color: var(--dark-grayish-blue);
+}

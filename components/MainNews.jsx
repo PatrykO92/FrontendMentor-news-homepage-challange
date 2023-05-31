@@ -1,9 +1,4 @@
 import { web3DesktopImage, web3MobileImage } from "@/public/images/articles";
-import "@/styles/mainNews.css";
-
-import Image from "next/image";
-import Link from "next/link";
-
 const mainNewAPIResponse = {
   title: "The Bright Future of Web 3.0?",
   description:
@@ -13,15 +8,26 @@ const mainNewAPIResponse = {
   url: "",
 };
 
+import styles from "@/styles/MainNews.module.css";
+
+import Image from "next/image";
+import Link from "next/link";
+
 const MainNews = () => {
   return (
-    <div className="main-news">
-      <Image src={mainNewAPIResponse.imgDesktop} width={600} />
-      <h1>{mainNewAPIResponse.title}</h1>
-      <p>{mainNewAPIResponse.description}</p>
-      <button>
-        <Link href={mainNewAPIResponse.url}>Read More</Link>
-      </button>
+    <div className={styles.main_news_box}>
+      <Image
+        src={mainNewAPIResponse.imgDesktop}
+        alt=""
+        className={styles.image}
+      />
+      <h1 className={styles.title}>{mainNewAPIResponse.title}</h1>
+      <div>
+        <p>{mainNewAPIResponse.description}</p>
+        <button>
+          <Link href={mainNewAPIResponse.url}>READ MORE</Link>
+        </button>
+      </div>
     </div>
   );
 };

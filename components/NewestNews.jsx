@@ -1,9 +1,10 @@
-import Image from "next/image";
+import styles from "@/styles/NewestNews.module.css";
+
 import Link from "next/link";
 
 const newestNewsAPIResponse = [
   {
-    title: "New Hydrogen VS Electric Cars",
+    title: "Hydrogen VS Electric Cars",
     description: "Will hydrogen-fueled cars ever catch up to EVs?",
     url: "",
   },
@@ -23,7 +24,7 @@ const newestNewsAPIResponse = [
 
 const oneArticle = (article) => {
   return (
-    <div>
+    <div className={styles.article}>
       <Link href={article.url}>
         <p>{article.title}</p>
       </Link>
@@ -34,7 +35,8 @@ const oneArticle = (article) => {
 
 const NewestNews = () => {
   return (
-    <div className="newest-news">
+    <div className={styles.news_box}>
+      <p>New</p>
       {newestNewsAPIResponse.map((article) => oneArticle(article))}
     </div>
   );

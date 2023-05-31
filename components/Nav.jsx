@@ -1,13 +1,13 @@
-import "@/styles/nav.css";
 import logo from "@/public/logo.svg";
+import styles from "@/styles/Nav.module.css";
 
 import Image from "next/image";
 import Link from "next/link";
 
 const Nav = () => {
   return (
-    <nav>
-      <Image src={logo} alt="logo" width={30} height={30} />
+    <nav className={styles.menu}>
+      <Image src={logo} alt="logo" />
       <div>
         <Link href="/">Home</Link>
         <Link href="/">New</Link>

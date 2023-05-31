@@ -4,6 +4,8 @@ import {
   topLaptopsImage,
 } from "@/public/images/articles";
 
+import styles from "@/styles/TrendingNews.module.css";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,22 +32,22 @@ const trendingNewsAPIResponse = [
 
 const oneArticle = (article, index) => {
   return (
-    <div>
-      <Image src={article.image} alt="" />
-      <p>{index + 1}</p>
-
-      <p>
-        <Link href={article.url}>{article.title}</Link>
-      </p>
-
-      <p>{article.description}</p>
+    <div className={styles.article}>
+      <Image src={article.image} alt="" className={styles.image} />
+      <div>
+        <p>0{index + 1}</p>
+        <p>
+          <Link href={article.url}>{article.title}</Link>
+        </p>
+        <p>{article.description}</p>
+      </div>
     </div>
   );
 };
 
 const TrendingNews = () => {
   return (
-    <div>
+    <div className={styles.trending_news_box}>
       {trendingNewsAPIResponse.map((article, index) =>
         oneArticle(article, index)
       )}
