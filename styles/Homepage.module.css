@@ -1,6 +1,7 @@
 .layout {
   display: grid;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 4rem;
   grid-template-columns: auto auto auto;
 }
 
@@ -10,4 +11,16 @@
 
 .trending {
   grid-column: span 3;
+}
+
+@media only screen and (max-width: 700px) {
+  .main {
+    grid-column: span 3;
+  }
+  .newest {
+    grid-column: span 3;
+  }
+  .trending {
+    grid-column: span 3;
+  }
 }
