@@ -22,9 +22,9 @@ const newestNewsAPIResponse = [
   },
 ];
 
-const oneArticle = (article) => {
+const oneArticle = (article, index) => {
   return (
-    <div className={styles.article}>
+    <div className={styles.article} key={index + "_newsest"}>
       <Link href={article.url}>
         <p>{article.title}</p>
       </Link>
@@ -37,7 +37,9 @@ const NewestNews = () => {
   return (
     <div className={styles.news_box}>
       <p>New</p>
-      {newestNewsAPIResponse.map((article) => oneArticle(article))}
+      {newestNewsAPIResponse.map((article, index) =>
+        oneArticle(article, index)
+      )}
     </div>
   );
 };

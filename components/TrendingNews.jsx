@@ -32,7 +32,7 @@ const trendingNewsAPIResponse = [
 
 const oneArticle = (article, index) => {
   return (
-    <div className={styles.article}>
+    <div className={styles.article} key={index+"_trending"}>
       <Image src={article.image} alt="" className={styles.image} />
       <div>
         <p>0{index + 1}</p>
